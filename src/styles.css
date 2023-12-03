@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Inter';
+  font-weight: 400;
+  src: url('./assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 500;
+  src: url('./assets/fonts/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  src: url('./assets/fonts/Inter-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('assets/fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/icone-material-icons.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: #FF7E1E;
+  --green: #0E3E29;
+  --white: #FFFFFF;
+  --text-color-green: #052014;
+  --text-color-light: #F5F5F5;
+  --border-color: #EAEAEA;
+  --content-background-light: #F7F7F7;
+  /* fonts */
+  --font-inter: 'Inter';
+  --font-space-grotesk: 'Space Grotesk';
+  --font-icon: 'Material Icons';
+}
+
+i {
+  font-family: var(--font-icon);
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+a {
+  text-decoration: none;
+  color: unser;
+}
+
+ul, ol, li {
+  list-style: none;
+}
