@@ -1,0 +1,21 @@
+<header>
+  <div id="brandLogo">
+    <i>home</i>
+    <span>Residencial</span>
+  </div>
+  <nav class="container-nav">
+    <button id="toggleMenu" (click)="toggleMenu($event)">
+      <i>menu</i>
+    </button>
+    @if (this.isVisible) {
+      <menu [className]="menuClass">
+        <li class="active" (click)="onClickMenuItem($event)">Quem somos</li>
+        <li (click)="onClickMenuItem($event)">Diferenciais</li>
+        <li (click)="onClickMenuItem($event)">Espaços</li>
+        <li (click)="onClickMenuItem($event)">Clientes</li>
+        <li (click)="onClickMenuItem($event)">Localização</li>
+      </menu>
+    }
+    <button id="getOffer" class="primary-button">Quero uma oferta</button>
+  </nav>
+</header>

@@ -1,0 +1,168 @@
+header {
+  background-color: var(--green);
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 7dvh;
+  padding-inline: 1rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .5);
+}
+
+header #brandLogo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-right: auto;
+}
+
+header #brandLogo > i {
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
+header #brandLogo > span {
+  font: 1.125rem var(--font-space-grotesk);
+  color: var(--white);
+  border-radius: .25rem;
+}
+
+.container-nav > :where(menu, #getOffer) {
+  display: none;
+}
+
+menu.active {
+  display: flex !important;
+  flex-direction: column;
+  gap: .25rem;
+  position: absolute;
+  right: 1rem;
+  top: calc(100% + .5rem);
+  background: var(--orange);
+  font-size: 1rem;
+  padding: .25rem;
+  border-radius: .25rem;
+  box-shadow: 0 0 0 0.25rem #ff994c, 0 0 .75rem rgba(0, 0, 0, 1);
+}
+
+menu.active {
+  padding: .5rem 1rem;
+  background: hsl(25.6deg 100% 65%);
+  border-radius: .25rem;
+  color: var(--text-color-green);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+menu.active::before {
+  content: "";
+  position: absolute;
+  top: -.75rem;
+  right: .5rem;
+  width: 0;
+  height: 0;
+  border: solid .5rem transparent;
+  border-left-color: #ff994c;
+  border-top-color: #ff994c;
+  rotate: 45deg;
+  z-index: 1;
+}
+
+#toggleMenu {
+  background: var(--orange);
+  border-radius: .25rem;
+  aspect-ratio: 1/1;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggleMenu > i {
+  color: var(--texto-color-green);
+  pointer-events: none;
+}
+
+#getOffer{
+  background-color: var(--orange);
+  color: var(--text-color-green);
+  border-radius: .25rem;
+  height: 2.5rem;
+}
+
+/* tablets and small desktop */
+@media screen and (min-width: 765px) and (max-width: 1199px) {
+  #toggleMenu {
+    display: none;
+  }
+
+  #getOffer {
+    display: block;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+  header {
+    height: 10dvh;
+    padding-inline: 10dvw;
+  }
+
+  #toggleMenu {
+    display: none;
+  }
+
+  .container-nav,
+  .container-nav > :where(menu, #getOffer) {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .container-nav {
+    gap: 2rem;
+  }
+
+  .container-nav > menu {
+    gap: 2rem;
+  }
+
+  .container-nav > menu > li {
+    color: var(--white);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-nav > menu > li.active {
+    color: var(--orange);
+  }
+
+  .container-nav > menu > li:not(.active):hover {
+    color: var(--border-color);
+  }
+
+  .container-nav > menu > li::after{
+    content: "";
+    display: block;
+    height: .125rem;
+    width: 0;
+    bottom: -.25rem;
+    position: absolute;
+    background-color: transparent;
+    opacity: 0;
+    transition: .25s ease-in-out;
+  }
+
+  .container-nav > menu > li:not(.active):hover::after{
+    opacity: 1;
+    width: 100%;
+    background-color: var(--orange);
+  }
+
+  .container-nav > menu > li:active {
+    scale: .95;
+  }
+}

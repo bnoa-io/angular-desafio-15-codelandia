@@ -48,6 +48,11 @@
   --font-icon: 'Material Icons';
 }
 
+
+body {
+  font-family: var(--font-inter);
+}
+
 i {
   font-family: var(--font-icon);
   font-family: 'Material Icons';
@@ -59,6 +64,22 @@ i {
   text-transform: lowercase;
 }
 
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: var(--orange);
+  color: var(--text-color-green);
+  padding-inline: 1rem;
+  border-radius: .25rem;
+  font-family: var(--font-inter);
+  font-weight: 600;
+}
+
 a {
   text-decoration: none;
   color: unser;
@@ -66,4 +87,25 @@ a {
 
 ul, ol, li {
   list-style: none;
+}
+
+/* mobile */
+@media screen and (max-width: 765px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+/* tablets and small desktop */
+@media screen and (min-width: 765px) and (max-width: 1199px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
 }
