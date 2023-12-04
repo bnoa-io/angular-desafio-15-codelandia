@@ -1,0 +1,183 @@
+#sectionWeAre {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 2rem;
+  gap: 2rem;
+}
+
+#sectionWeAre > figure {
+  order: -1;
+}
+
+#sectionWeAre > figure > img {
+  padding-left: 1rem;
+  width: 100%;
+  max-height: 18.75rem;
+}
+
+#sectionWeAre > div {
+  padding: 0 1rem 4rem;
+}
+
+#sectionWeAre > div > h1 {
+  color: var(--text-color-green);
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#sectionWeAre > div > h1 > strong {
+  color: var(--orange);
+}
+
+#sectionWeAre > div > p {
+  color: var(--text-color-green);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#sectionWeAre > div > button {
+  height: 2.5rem;
+}
+
+#sectionWeAreMore {
+  background-color: var(--green);
+  padding: 4rem 1rem;
+}
+
+#sectionWeAreMore > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#sectionWeAreMore > div > .primary-button {
+  width: fit-content;
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+#sectionWeAreMore > div > h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#sectionWeAreMore > div > p {
+  font-size: 1rem;
+}
+
+#sectionWeAreMore > div > p:last-of-type {
+  margin-bottom: 4rem;
+}
+
+#sectionWeAreMore > div > :where(h2, p) {
+  color: var(--text-color-light);
+}
+
+#sectionWeAreMore > figure > img {
+  width: 100%;
+  max-height: 300px;
+}
+
+/* tablets and small desktop */
+@media screen and (min-width: 765px) and (max-width: 1199px) {
+  #sectionWeAre {
+    gap: 3rem;
+  }
+
+  :is(#sectionWeAre, #sectionWeAreMore) > div {
+    padding-inline: 2rem;
+  }
+
+  #sectionWeAre > div > h1 {
+    font-size: 3rem;
+  }
+
+  #sectionWeAre > div > p {
+    font-size: 1.25rem;
+    max-width: 75%;
+  }
+
+  #sectionWeAre > div > button {
+    font-size: 1rem;
+  }
+
+  #sectionWeAre > figure {
+    order: 1;
+  }
+
+  #sectionWeAre > figure > img{
+    max-height: 28.125rem;
+    padding-left: 2rem;
+  }
+
+  #sectionWeAreMore {
+    padding: 7.5rem 0;
+  }
+
+  #sectionWeAreMore > figure > img {
+    max-height: 400px;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+  #sectionWeAre,
+  #sectionWeAreMore {
+    grid-template-columns: repeat(2, calc(50% - 1rem));
+  }
+
+  #sectionWeAre {
+    padding: 2rem 0;
+  }
+
+  #sectionWeAre > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10dvw;
+  }
+
+  #sectionWeAre > div > h1 {
+    font-size: 4rem;
+  }
+
+  #sectionWeAre > div > p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  #sectionWeAre .primary-button {
+    width: fit-content;
+    font-size: 1rem;
+  }
+
+  #sectionWeAre > figure {
+    order: unset;
+  }
+
+  #sectionWeAre > figure > img {
+    max-height: 34.375rem;
+  }
+
+  #sectionWeAreMore {
+    display: grid;
+    padding: 0;
+    gap: 2rem;
+    min-height: 43.75rem;
+  }
+
+  #sectionWeAreMore > div {
+    padding-left: 10dvw;
+    padding-right: 15%;
+    justify-content: center;
+  }
+
+  #sectionWeAreMore > div > p {
+    line-height:  1.75rem;
+  }
+
+  #sectionWeAreMore > figure > img {
+    min-height: 100%;
+  }
+}

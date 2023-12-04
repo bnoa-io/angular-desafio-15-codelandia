@@ -13,6 +13,7 @@ header #brandLogo {
   align-items: center;
   gap: .5rem;
   margin-right: auto;
+  user-select: none;
 }
 
 header #brandLogo > i {
@@ -46,15 +47,6 @@ menu.active {
   box-shadow: 0 0 0 0.25rem #ff994c, 0 0 .75rem rgba(0, 0, 0, 1);
 }
 
-menu.active {
-  padding: .5rem 1rem;
-  background: hsl(25.6deg 100% 65%);
-  border-radius: .25rem;
-  color: var(--text-color-green);
-  cursor: pointer;
-  font-weight: 500;
-}
-
 menu.active::before {
   content: "";
   position: absolute;
@@ -67,6 +59,20 @@ menu.active::before {
   border-top-color: #ff994c;
   rotate: 45deg;
   z-index: 1;
+}
+
+menu.active > li {
+  padding: .5rem 1rem;
+  background: hsl(25.6deg 100% 65%);
+  border-radius: .25rem;
+  color: var(--text-color-green);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+menu.active > li:hover {
+  background: var(--green);
+  color: var(--orange);
 }
 
 #toggleMenu {
@@ -93,6 +99,10 @@ menu.active::before {
 
 /* tablets and small desktop */
 @media screen and (min-width: 765px) and (max-width: 1199px) {
+  header {
+    padding-inline: 2rem;
+  }
+
   #toggleMenu {
     display: none;
   }
@@ -134,6 +144,7 @@ menu.active::before {
     position: relative;
     display: flex;
     justify-content: center;
+    user-select: none;
   }
 
   .container-nav > menu > li.active {
