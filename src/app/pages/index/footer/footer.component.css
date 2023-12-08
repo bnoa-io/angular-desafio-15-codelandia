@@ -6,13 +6,11 @@ footer {
   justify-content: center;
   align-items: center;
   color: var(--white);
-  font-family: var(--font-space-grotesk);
-  margin-top: 2rem;
+  font: 1.4rem var(--font-space-grotesk);
 }
 
 @media screen and (min-width: 1200px) {
   footer {
-    font-size: 1.25rem;
-    margin-top: 4rem;
+    font-size: 2rem;
   }
 }

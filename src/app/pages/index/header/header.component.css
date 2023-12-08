@@ -4,14 +4,16 @@ header {
   display: flex;
   align-items: center;
   min-height: 7dvh;
-  padding-inline: 1rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .5);
+  padding-inline: 2.4rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, .5);
+  position: sticky;
+  top: 0;
 }
 
 header #brandLogo {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: .8rem;
   margin-right: auto;
   user-select: none;
 }
@@ -19,14 +21,15 @@ header #brandLogo {
 header #brandLogo > i {
   background: var(--orange);
   color: var(--white);
-  border-radius: 0.25rem;
-  padding: 0.25rem;
+  border-radius: var(--radius);
+  padding: 0.4rem;
 }
 
 header #brandLogo > span {
-  font: 1.125rem var(--font-space-grotesk);
+  font: 1.8rem var(--font-space-grotesk);
   color: var(--white);
-  border-radius: .25rem;
+  border-radius: var(--radius);
+  font-weight: 500;
 }
 
 .container-nav > :where(menu, #getOffer) {
@@ -36,25 +39,24 @@ header #brandLogo > span {
 menu.active {
   display: flex !important;
   flex-direction: column;
-  gap: .25rem;
+  gap: .4rem;
   position: absolute;
-  right: 1rem;
-  top: calc(100% + .5rem);
+  right: 2.4rem;
+  top: calc(100% + .8rem);
   background: var(--orange);
-  font-size: 1rem;
-  padding: .25rem;
-  border-radius: .25rem;
-  box-shadow: 0 0 0 0.25rem #ff994c, 0 0 .75rem rgba(0, 0, 0, 1);
+  padding: .4em;
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 .4rem #ff994c, 0 0 .12rem rgba(0, 0, 0, 1);
 }
 
 menu.active::before {
   content: "";
   position: absolute;
-  top: -.75rem;
-  right: .5rem;
+  top: -1.2rem;
+  right: .8rem;
   width: 0;
   height: 0;
-  border: solid .5rem transparent;
+  border: solid .8rem transparent;
   border-left-color: #ff994c;
   border-top-color: #ff994c;
   rotate: 45deg;
@@ -62,24 +64,24 @@ menu.active::before {
 }
 
 menu.active > li {
-  padding: .5rem 1rem;
+  padding: .8rem 1.6rem;
   background: hsl(25.6deg 100% 65%);
-  border-radius: .25rem;
+  border-radius: var(--radius);
   color: var(--text-color-green);
   cursor: pointer;
   font-weight: 500;
 }
 
-menu.active > li:hover {
+menu.active > :where(li:hover, li.active) {
   background: var(--green);
   color: var(--orange);
 }
 
 #toggleMenu {
   background: var(--orange);
-  border-radius: .25rem;
+  border-radius: var(--radius);
+  width: 3.2rem;
   aspect-ratio: 1/1;
-  width: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,14 +95,15 @@ menu.active > li:hover {
 #getOffer{
   background-color: var(--orange);
   color: var(--text-color-green);
-  border-radius: .25rem;
-  height: 2.5rem;
+  border-radius: var(--radius);
+  height: 4rem;
 }
 
 /* tablets and small desktop */
 @media screen and (min-width: 765px) and (max-width: 1199px) {
   header {
-    padding-inline: 2rem;
+    padding-inline: 3.2rem;
+    height: 8dvh;
   }
 
   #toggleMenu {
@@ -108,15 +111,22 @@ menu.active > li:hover {
   }
 
   #getOffer {
+    height: 3.7rem;
+    padding-inline: 1.6rem;
     display: block;
+    font-size: 1.4rem;
   }
 }
 
 /* desktop */
 @media screen and (min-width: 1200px) {
   header {
-    height: 10dvh;
+    height: 8.25dvh;
     padding-inline: 10dvw;
+  }
+
+  #brandLogo > span {
+    font-size: 1.8rem !important;
   }
 
   #toggleMenu {
@@ -127,11 +137,10 @@ menu.active > li:hover {
   .container-nav > :where(menu, #getOffer) {
     display: flex;
     align-items: center;
-    font-size: 1rem;
   }
 
   .container-nav {
-    gap: 2rem;
+    gap: 4rem;
   }
 
   .container-nav > menu {
@@ -145,6 +154,8 @@ menu.active > li:hover {
     display: flex;
     justify-content: center;
     user-select: none;
+    font-weight: 500;
+    font-size: 1.6rem;
   }
 
   .container-nav > menu > li.active {
@@ -158,9 +169,9 @@ menu.active > li:hover {
   .container-nav > menu > li::after{
     content: "";
     display: block;
-    height: .125rem;
+    height: .2rem;
     width: 0;
-    bottom: -.25rem;
+    bottom: -.4rem;
     position: absolute;
     background-color: transparent;
     opacity: 0;
@@ -175,5 +186,10 @@ menu.active > li:hover {
 
   .container-nav > menu > li:active {
     scale: .95;
+  }
+
+  #getOffer {
+    font-size: 1.6rem;
+    padding: 1.6rem 2.4rem;
   }
 }

@@ -1,7 +1,7 @@
 #sectionWeAre {
   display: grid;
   grid-template-columns: 1fr;
-  padding-top: 2rem;
+  padding-top: 6.4rem;
   gap: 2rem;
 }
 
@@ -10,18 +10,18 @@
 }
 
 #sectionWeAre > figure > img {
-  padding-left: 1rem;
+  padding-left: 1.6rem;
   width: 100%;
-  max-height: 18.75rem;
+  max-height: 26rem;
 }
 
 #sectionWeAre > div {
-  padding: 0 1rem 4rem;
+  padding: 0 2.4rem 6.4rem;
 }
 
 #sectionWeAre > div > h1 {
   color: var(--text-color-green);
-  font-size: 2.25rem;
+  font-size: 3.6rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -32,38 +32,40 @@
 
 #sectionWeAre > div > p {
   color: var(--text-color-green);
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2.4rem;
 }
 
 #sectionWeAre > div > button {
-  height: 2.5rem;
+  height: 4rem;
+  font-size: 1.4rem;
+  padding-inline: 1.4rem;
 }
 
 #sectionWeAreMore {
   background-color: var(--green);
-  padding: 4rem 1rem;
+  padding: 6.4rem 2.4rem;
 }
 
 #sectionWeAreMore > div {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.4rem;
 }
 
 #sectionWeAreMore > div > .primary-button {
   width: fit-content;
-  height: 2.5rem;
-  font-size: 1rem;
+  height: 3.2rem;
+  font-size: 1.4rem;
+  padding-inline: 1.2rem;
 }
 
 #sectionWeAreMore > div > h2 {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 3.2rem;
+  margin-bottom: .8rem;
 }
 
 #sectionWeAreMore > div > p {
-  font-size: 1rem;
+  line-height: 2.5rem;
 }
 
 #sectionWeAreMore > div > p:last-of-type {
@@ -76,7 +78,7 @@
 
 #sectionWeAreMore > figure > img {
   width: 100%;
-  max-height: 300px;
+  max-height: 30rem;
 }
 
 /* tablets and small desktop */
@@ -86,37 +88,59 @@
   }
 
   :is(#sectionWeAre, #sectionWeAreMore) > div {
-    padding-inline: 2rem;
+    padding-inline: 3.2rem;
   }
 
   #sectionWeAre > div > h1 {
-    font-size: 3rem;
+    font-size: 4.8rem;
   }
 
   #sectionWeAre > div > p {
-    font-size: 1.25rem;
-    max-width: 75%;
+    font-size: 2rem;
+    line-height: 3rem;
+    max-width: 80%;
+    font-weight: 500;
   }
 
   #sectionWeAre > div > button {
-    font-size: 1rem;
+    font-size: 1.4rem;
+    padding-inline: 1.4rem;
   }
 
   #sectionWeAre > figure {
     order: 1;
+    margin-bottom: 8rem;
   }
 
   #sectionWeAre > figure > img{
-    max-height: 28.125rem;
-    padding-left: 2rem;
+    max-height: 42.9rem;
+    padding-left: 3.2rem;
   }
 
   #sectionWeAreMore {
-    padding: 7.5rem 0;
+    padding: 9.6rem 0;
+  }
+
+  #sectionWeAreMore > div > button {
+    height: 3.8rem;
+    padding-inline: 1.6rem;
+  }
+
+  #sectionWeAreMore > div > h2 {
+    font-size: 4rem;
+    margin-bottom: .8rem;
+  }
+
+  #sectionWeAreMore > div > p {
+    line-height: 2.5rem;
+  }
+
+  #sectionWeAreMore > div > p:last-of-type {
+    margin-bottom: 6.4rem;
   }
 
   #sectionWeAreMore > figure > img {
-    max-height: 400px;
+    max-height: 40rem;
   }
 }
 
@@ -128,28 +152,36 @@
   }
 
   #sectionWeAre {
-    padding: 2rem 0;
+    padding: 5.6rem 0;
   }
 
   #sectionWeAre > div {
     display: flex;
     flex-direction: column;
+    gap: 2.4rem;
     justify-content: center;
     padding-left: 10dvw;
   }
 
   #sectionWeAre > div > h1 {
-    font-size: 4rem;
+    font-size: 5.6rem;
   }
 
   #sectionWeAre > div > p {
-    font-size: 1.25rem;
+    padding-right: 2rem;
+    font-size: 2rem;
+    line-height: 3.2rem;
     margin-bottom: 2rem;
+    font-weight: 500;
   }
 
   #sectionWeAre .primary-button {
+    height: 5rem !important;
+    padding-inline: 2.4rem;
     width: fit-content;
-    font-size: 1rem;
+    font-size: 1.6rem !important;
+    display: flex;
+    align-items: center;
   }
 
   #sectionWeAre > figure {
@@ -157,7 +189,7 @@
   }
 
   #sectionWeAre > figure > img {
-    max-height: 34.375rem;
+    min-height: 53.4rem;
   }
 
   #sectionWeAreMore {
@@ -168,13 +200,22 @@
   }
 
   #sectionWeAreMore > div {
-    padding-left: 10dvw;
-    padding-right: 15%;
-    justify-content: center;
+    padding: 13rem 15% 13rem 10dvw;
+  }
+
+  #sectionWeAreMore > div > button {
+    height: 3.5rem;
+    font-size: 1.6rem !important;
+    margin-bottom: 2.4rem;
   }
 
   #sectionWeAreMore > div > p {
-    line-height:  1.75rem;
+    font-size: 1.8rem;
+    line-height:  2.8rem;
+  }
+
+  #sectionWeAreMore > div > p:last-of-type {
+    margin-bottom: 0;
   }
 
   #sectionWeAreMore > figure > img {

@@ -7,7 +7,7 @@
     <button id="toggleMenu" (click)="toggleMenu($event)">
       <i>menu</i>
     </button>
-    @if (this.isVisible) {
+    @if (this.isVisibleMenu) {
       <menu [className]="menuClass">
         <li class="active" (click)="onClickMenuItem($event)">Quem somos</li>
         <li (click)="onClickMenuItem($event)">Diferenciais</li>

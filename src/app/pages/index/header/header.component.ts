@@ -9,7 +9,7 @@ import { Component, HostListener  } from '@angular/core';
 })
 export class HeaderComponent {
   menuClass:string = '';
-  isVisible:boolean = window.innerWidth < 766 || window.innerWidth > 1199;
+  isVisibleMenu:boolean = window.innerWidth < 766 || window.innerWidth > 1199;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
@@ -17,7 +17,7 @@ export class HeaderComponent {
   }
 
   private updateVisibility(): void {
-    this.isVisible = window.innerWidth < 766 || window.innerWidth > 1199;
+    this.isVisibleMenu = window.innerWidth < 766 || window.innerWidth > 1199;
     this.menuClass = window.innerWidth > 1199 ? '' : this.menuClass;
   }
 

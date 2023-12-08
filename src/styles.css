@@ -42,15 +42,19 @@
   --text-color-light: #F5F5F5;
   --border-color: #EAEAEA;
   --content-background-light: #F7F7F7;
+  --radius: .4rem;
   /* fonts */
   --font-inter: 'Inter';
   --font-space-grotesk: 'Space Grotesk';
   --font-icon: 'Material Icons';
 }
 
+html {
+  font-size: 10px;
+}
 
 body {
-  font-family: var(--font-inter);
+  font: 1.6rem var(--font-inter);
 }
 
 i {
@@ -75,7 +79,7 @@ button {
   background-color: var(--orange);
   color: var(--text-color-green);
   padding-inline: 1rem;
-  border-radius: .25rem;
+  border-radius: var(--radius);
   font-family: var(--font-inter);
   font-weight: 600;
 }
@@ -93,23 +97,18 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-space-grotesk);
 }
 
-/* mobile */
-@media screen and (max-width: 765px) {
-  body {
-    font-size: 10px;
-  }
+h2 {
+  font-weight: 500;
+  font-size: 4rem;
 }
 
 /* tablets and small desktop */
 @media screen and (min-width: 765px) and (max-width: 1199px) {
-  body {
-    font-size: 12px;
-  }
 }
 
 /* desktop */
 @media screen and (min-width: 1200px) {
-  body {
-    font-size: 16px;
+  h2 {
+    font-size: 4.8rem;
   }
 }
