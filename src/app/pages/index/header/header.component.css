@@ -8,6 +8,7 @@ header {
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, .5);
   position: sticky;
   top: 0;
+  z-index: 5;
 }
 
 header #brandLogo {

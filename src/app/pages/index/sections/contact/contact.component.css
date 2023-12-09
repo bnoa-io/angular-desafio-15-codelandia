@@ -1,0 +1,208 @@
+#sectionContact {
+  padding: 8rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+}
+
+#sectionContact > div > h2 {
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
+
+#sectionContact > div > p {
+  color: var(--text-color-green);
+  line-height: 2.5rem;
+  margin-bottom: 4rem;
+  font-weight: 500;
+}
+
+#sectionContact > div > form {
+  margin-bottom: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.input-group {
+  width: 100%;
+  position: relative;
+}
+
+.input-group > :where(input, select) {
+  width: 100%;
+  height: 5rem;
+  border: solid .1rem var(--border-color);
+  padding-inline: 2rem;
+  font: 1.6rem var(--font-inter);
+  font-weight: 500;
+}
+
+.input-group > input {
+  padding-top: 1.6rem;
+}
+
+.input-group select:focus-within,
+.input-group > input:focus {
+  border-color: var(--orange) !important;
+}
+
+.input-group > input:focus+label,
+.input-group > input:not(:placeholder-shown)+label {
+  top: calc(50% - 1.8rem);
+  color: var(--text-color-weak);
+}
+
+.input-group > select {
+  outline: none;
+}
+
+.input-group > label {
+  position: absolute;
+  left: 2.1rem;
+  top: calc(50% - calc(1.4rem / 2));
+  bottom: 50%;
+  font-weight: 500;
+  font-size: 1.4rem;
+  z-index: 1;
+  transition: ease-out .15s;
+}
+
+.input-group > label > b {
+  color: var(--orange);
+  font: inherit;
+}
+
+.input-group > select::after {
+  content: "expand_more";
+  font: 1.8rem var(--font-icon);
+  color: var(--text-color-green);
+}
+
+#sectionContact > div > form > button {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--orange);
+  text-transform: uppercase;
+  font: 1.6rem var(--font-inter);
+  font-weight: 500;
+  color: var(--white);
+}
+
+#sectionContact .contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+#sectionContact .contact-method:first-of-type {
+  margin-bottom: 2.4rem;
+}
+
+#sectionContact .contact-method > span {
+  font: 3.5rem var(--font-icon);
+  color: var(--text-color-green);
+}
+
+#sectionContact .contact-method > p {
+  color: var(--text-color-green);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#sectionContact .contact-method > p > b {
+  display: block;
+  color: var(--orange);
+  font-weight: 500;
+  text-transform: none;
+}
+
+#sectionContact > figure > img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* tablets and small desktop */
+@media screen and (min-width: 765px) and (max-width: 1199px) {
+  #sectionContact {
+    padding: 14.4rem 3.2rem;
+  }
+
+  #sectionContact > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #sectionContact > div > h2 {
+    width: 100%;
+    font-size: 4rem;
+  }
+
+  #sectionContact > div > p {
+    width: 100%;
+    font-size: 1.6rem;
+    max-width: 50%;
+    margin-bottom: 4rem;
+  }
+
+  form {
+    width: 100%;
+    margin-bottom: 4.8rem;
+  }
+
+  #sectionContact .contact-method:first-of-type {
+    margin-bottom: unset;
+  }
+
+  #sectionContact > figure > img {
+    width: 100%;
+    height: 55rem;
+    object-fit: cover;
+    border-radius: var(--radius);
+    object-position: 10% 26%;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+  #sectionContact {
+    padding: 14.4rem 10dvw;
+    flex-direction: row;
+    gap: 13.6rem;
+  }
+
+  #sectionContact > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+  }
+
+  #sectionContact > div > :where(h2, p, form) {
+    width: 100%;
+  }
+
+  #sectionContact > div > h2 {
+    font-size: 4rem;
+  }
+
+  #sectionContact > div > p {
+    font-size: 1.8rem;
+  }
+
+  #sectionContact > div > form > button {
+    font-size: 1.8rem;
+  }
+
+  .contact-method:first-of-type {
+    margin: 0 4.8rem 0 0 !important;
+  }
+
+  #sectionContact > figure > img {
+    height: 70rem;
+    min-width: 45rem;
+  }
+}

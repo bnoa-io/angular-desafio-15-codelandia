@@ -139,6 +139,10 @@
     gap: 2rem;
   }
 
+  .container-introduction > h2 {
+    font-size: 4.8rem;
+  }
+
   .container-introduction > p {
     font-size: 2rem;
     line-height: 3.2rem;

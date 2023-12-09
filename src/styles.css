@@ -40,6 +40,7 @@
   --white: #FFFFFF;
   --text-color-green: #052014;
   --text-color-light: #F5F5F5;
+  --text-color-weak: #052014B8;
   --border-color: #EAEAEA;
   --content-background-light: #F7F7F7;
   --radius: .4rem;
@@ -66,6 +67,12 @@ i {
   display: inline-block;
   line-height: 1;
   text-transform: lowercase;
+}
+
+input {
+  background-color: unset;
+  border: none;
+  outline: none;
 }
 
 button {
@@ -100,6 +107,11 @@ h1, h2, h3, h4, h5 {
 h2 {
   font-weight: 500;
   font-size: 4rem;
+}
+
+::selection {
+  background-color: var(--orange);
+  color: var(--text-color-green);
 }
 
 /* tablets and small desktop */

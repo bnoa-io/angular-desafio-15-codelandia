@@ -209,6 +209,10 @@
     margin-bottom: 2.4rem;
   }
 
+  #sectionWeAreMore > div > h2 {
+    font-size: 4.8rem;
+  }
+
   #sectionWeAreMore > div > p {
     font-size: 1.8rem;
     line-height:  2.8rem;
