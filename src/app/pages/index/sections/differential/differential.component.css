@@ -1,0 +1,133 @@
+#sectionDifferential {
+  padding: 9.6rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#sectionDifferential > span {
+  color: var(--orange);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+#sectionDifferential > h2 {
+  font-size: 3.2rem;
+  line-height: 3.5rem;
+  color: var(--text-color-green);
+  margin-bottom: 5.6rem;
+  text-align: center;
+}
+
+#sectionDifferential > nav > button {
+  display: none;
+}
+
+#sectionDifferential > nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+#sectionDifferential > nav > ul > li {
+  border: solid .1rem var(--border-color);
+  background-color: var(--content-background-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3.2rem;
+  aspect-ratio: 1/.85;
+  border-radius: var(--radius);
+}
+
+#sectionDifferential > nav > ul > li > p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+  padding-inline: 4.7rem;
+}
+
+#sectionDifferential > nav > ul > li > span {
+  background-color: var(--orange);
+  color: var(--white);
+  font: 4rem var(--font-icon);
+  border-radius: 100%;
+  width: 7.5rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (min-width: 765px) and (max-width: 1199px) {
+  #sectionDifferential {
+    padding: 9.6rem 0 8rem;
+  }
+
+  #sectionDifferential > :where(span, h2) {
+    padding-inline: 3.4rem;
+  }
+
+  #sectionDifferential > span {
+    font-size: 1.8rem;
+  }
+
+  #sectionDifferential > h2 {
+    width: 80%;
+    margin-inline: auto;
+    font-size: 4rem;
+  }
+
+  #sectionDifferential > nav > ul {
+    flex-direction: row;
+    overflow-x: hidden;
+  }
+
+  #sectionDifferential > nav > ul > li:first-child {
+    margin-left: 3.4rem;
+  }
+
+  #sectionDifferential > nav > ul > li {
+    min-width: 28.7rem;
+    height: 22.7rem;
+    aspect-ratio: unset;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #sectionDifferential {
+    padding: 14.4rem 10dvw 8rem;
+  }
+
+  #sectionDifferential > span {
+    font-size: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  #sectionDifferential > h2 {
+    max-width: 60%;
+    font-size: 4.8rem;
+    margin-bottom: 5.6rem;
+    margin-inline: auto;
+  }
+
+  #sectionDifferential > nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  #sectionDifferential > nav > ul {
+    flex-direction: row;
+    gap: 3.1rem;
+    overflow: hidden;
+  }
+
+  #sectionDifferential > nav > ul > li {
+    width: 28rem;
+    height: 27.7rem;
+  }
+}
