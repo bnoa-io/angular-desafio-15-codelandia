@@ -9,11 +9,11 @@
     </button>
     @if (this.isVisibleMenu) {
       <menu [className]="menuClass">
-        <li class="active" (click)="onClickMenuItem($event)">Quem somos</li>
-        <li (click)="onClickMenuItem($event)">Diferenciais</li>
-        <li (click)="onClickMenuItem($event)">Espaços</li>
-        <li (click)="onClickMenuItem($event)">Clientes</li>
-        <li (click)="onClickMenuItem($event)">Localização</li>
+        <li class="active" (click)="onClickMenuItem($event)" data-navigate="weAre">Quem somos</li>
+        <li (click)="onClickMenuItem($event)" data-navigate="differential">Diferenciais</li>
+        <li (click)="onClickMenuItem($event)" data-navigate="venues">Espaços</li>
+        <li (click)="onClickMenuItem($event)" data-navigate="testimonials">Clientes</li>
+        <li (click)="onClickMenuItem($event)" data-navigate="contact">Localização</li>
       </menu>
     }
     <button id="getOffer" class="primary-button">Quero uma oferta</button>

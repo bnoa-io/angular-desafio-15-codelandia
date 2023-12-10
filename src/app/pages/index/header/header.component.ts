@@ -36,5 +36,15 @@ export class HeaderComponent {
     const menuItem = event.currentTarget as HTMLLIElement;
     menuItem.parentElement?.querySelector('li.active')?.classList.remove('active');
     menuItem.classList.add('active');
+
+    sectionNavigate(menuItem.dataset['navigate']);
   }
 }
+
+function sectionNavigate(section: string | undefined):void {
+  document.querySelector(`section[data-section="${section}"]`)?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+}
+
