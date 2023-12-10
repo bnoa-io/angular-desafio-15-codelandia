@@ -1,0 +1,151 @@
+#sectionVenues {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 8rem;
+}
+
+#sectionVenues > span {
+  color: var(--orange);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+#sectionVenues > h2 {
+  font-size: 3.2rem;
+  line-height: 3.5rem;
+  text-align: center;
+  margin-bottom: 5.6rem;
+  padding-inline: 2.4rem;
+}
+
+#sectionVenues > nav {
+  width: 100%;
+}
+
+#sectionVenues > nav > ul {
+  display: flex;
+  gap: 3.2rem;
+  overflow-x: hidden;
+  margin-bottom: 5.6rem;
+}
+
+#sectionVenues > nav > ul > li:first-child {
+  margin-left: 2.4rem;
+}
+
+#sectionVenues > nav > ul > li:last-child {
+  margin-right: 2.4rem;
+}
+
+#sectionVenues > nav > ul > li > img {
+  min-width: 28rem;
+  max-width: 28rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--radius);
+}
+
+#sectionVenues > nav > button {
+  display: none;
+}
+
+#sectionVenues > nav > div {
+  display: flex;
+  justify-content: center;
+  gap: .8rem;
+}
+
+#sectionVenues > nav > div > input {
+  appearance: none;
+  width: 2rem;
+  height: 1rem;
+  background-color: var(--content-background-light);
+  border: solid .1rem var(--border-color);
+  transition: .15s;
+  cursor: pointer;
+  border-radius: .5rem;
+}
+
+#sectionVenues > nav > div > input:checked {
+  width: 3rem;
+  background-color: var(--orange);
+  border-color: var(--orange);
+}
+
+@media screen and (min-width: 765px) and (max-width: 1199px) {
+  #sectionVenues > span {
+    font-size: 1.8rem;
+    margin-bottom: 2.4rem;
+  }
+
+  #sectionVenues > h2 {
+    font-size: 4rem;
+    width: 80%;
+  }
+
+  #sectionVenues > nav > ul > li:first-child {
+    margin-left: 3.2rem;
+  }
+
+  #sectionVenues > nav > ul > li:last-child {
+    margin-right: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #sectionVenues {
+    padding: 14.4rem 10vw 8rem;
+  }
+
+  #sectionVenues > span {
+    font-size: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  #sectionVenues > h2 {
+    font-size: 4.8rem;
+    width: 75%;
+    color: var(--text-color-green);
+    line-height: 5.28rem;
+  }
+
+  #sectionVenues > nav {
+    position: relative;
+    max-width: 121.6rem;
+  }
+
+  #sectionVenues > nav > button {
+    display: block;
+    width: 5.7rem;
+    aspect-ratio: 1/1;
+    background-color: var(--orange);
+    color: var(--text-color-light);
+    border-radius: 100%;
+    user-select: none;
+    font: 1.6rem var(--font-icon);
+    position: absolute;
+    top: calc(28rem / 2 - 5.7rem /2);
+  }
+
+  #sectionVenues > nav > button:first-of-type {
+    left: calc(0% - calc(5.7rem / 2));
+  }
+
+  #sectionVenues > nav > button:last-of-type {
+    right: calc(0% - calc(5.7rem / 2));
+  }
+
+  #sectionVenues > nav > ul {
+    justify-content: space-between;
+  }
+
+  #sectionVenues > nav > ul > li:first-child {
+    margin-left: unset;
+  }
+
+  #sectionVenues > nav > ul > li:last-child {
+    margin-right: unset;
+  }
+}

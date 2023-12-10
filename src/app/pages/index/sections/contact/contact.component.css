@@ -66,6 +66,7 @@
   font-size: 1.4rem;
   z-index: 1;
   transition: ease-out .15s;
+  user-select: none;
 }
 
 .input-group > label > b {
